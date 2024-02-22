@@ -11,4 +11,4 @@ Se ha implementado un servidor 'HttpServer' que atiende las solicitudes de Facad
 
 ![view](image.png)
 
-Se ha implementado en su totalidad la logica pero queda un error de respuesta del servidor por investigar, para ejecutar el programa se debe correr el servidor 'HttpServer' y el servidor 'Facade' y luego ingresar a  en un navegador. [Index](localhost:36001/index.html)
+Se ha implementado en su totalidad la logica pero queda un error de respuesta del servidor por investigar, para ejecutar el programa se debe correr el servidor 'HttpServer' y el servidor 'Facade' y luego ingresar a  en un navegador. [localhost:36001/index.html](localhost:36001/index.html)
