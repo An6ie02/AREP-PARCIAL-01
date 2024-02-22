@@ -45,7 +45,9 @@ public class HttpServer {
                 if (path.startsWith("/compreflex")) {
                     String[] commandParams = query.split("\\(");
                     String command = commandParams[0];
+                    System.out.println(command);
                     String[] classAndMethod = commandParams[1].split(",");
+                    System.out.println(classAndMethod[0]);
                     String className = classAndMethod[0];
                     String methodName = classAndMethod[1];
                     if (command.equals("class")) {

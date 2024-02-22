@@ -72,8 +72,8 @@ public class FacadeWeb {
                 "        <form action=\"/hello\">\n" +
                 "            <label for=\"command\">Comando:</label><br><br>\n" +
                 "            <input type=\"text\" id=\"command\" name=\"name\" value=\"invoke\"><br><br>\n" +
-                "            <label for=\"class\">Clase:</label><br><br>\n" +
-                "            <input type=\"text\" id=\"class\\\" name=\"name\" value=\"java.lang.System\" ><br><br>\n" +
+                "            <label for=\"classes\">Clase:</label><br><br>\n" +
+                "            <input type=\"text\" id=\"classes\" name=\"name\" value=\"java.lang.System\" ><br><br>\n" +
                 "            <label for=\"params\">Parametros separados por \",\":</label><br><br>\n" +
                 "            <input type=\"text\" id=\"params\" name=\"name\" value=\"getenv\"><br><br>\n" +
                 "            <input type=\"button\" value=\"Consultar\" onclick=\"loadGetMsg()\">\n" +
@@ -89,14 +89,14 @@ public class FacadeWeb {
         return "        <script>\n" +
                 "            function loadGetMsg() {\n" +
                 "                let commandVar = document.getElementById(\"command\").value;\n" +
-                "                let nameClass = document.getElementById(\"class\").value;\n" +
+                "                let nameClass = document.getElementById(\"classes\").value;\n" +
                 "                let paramsVar = document.getElementById(\"params\").value;\n" +
                 "                const xhttp = new XMLHttpRequest();\n" +
                 "                xhttp.onload = function() {\n" +
                 "                    document.getElementById(\"getrespmsg\").innerHTML =\n" +
                 "                    this.responseText;\n" +
                 "                }\n" +
-                "                xhttp.open(\"GET\", \"/consulta?comando=\"+commandVar +\"(\" + paramsVar +\")\");\n" +
+                "                xhttp.open(\"GET\", \"/consulta?comando=\"+commandVar +\"(\" + nameClass + \",\" +paramsVar +\")\");\n" +
                 "                xhttp.send();\n" +
                 "            }\n" +
                 "        </script>\n";
